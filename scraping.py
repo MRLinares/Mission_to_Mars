@@ -74,7 +74,8 @@ def featured_image(browser):
 
     # Visit URL
 
-    url = 'https://data-class-jpl-space.s3.amazonaws.com/JPL_Space/index.html'
+    url = 'https://mars.nasa.gov/msl/home/'
+    # url = 'https://data-class-jpl-space.s3.amazonaws.com/JPL_Space/index.html'
     browser.visit(url)
 
     # Find and click the full image button
@@ -93,14 +94,16 @@ def featured_image(browser):
 
         # Find the relative image url
 
-        img_url_rel = img_soup.find('img', class_='fancybox-image').get('src')
+        img_url_rel = img_soup.find('img', alt='slide 1 - Mars Curiosity Rover').get('src')
+        # img_url_rel = img_soup.find('img', class_='fancybox-image').get('src')
         
     except AttributeError:
         return None
 
     # Use the base URL to create an absolute URL
 
-    img_url = f'https://data-class-jpl-space.s3.amazonaws.com/JPL_Space/{img_url_rel}'
+    img_url = f'https://mars.nasa.gov/{img_url_rel}'
+    # img_url = f'https://data-class-jpl-space.s3.amazonaws.com/JPL_Space/{img_url_rel}'
     
     return img_url
 
@@ -153,7 +156,7 @@ def hemispheres(browser):
             # get Sample image url and add it to hemispheres dict
             html = browser.html
             hem_soup = soup(html, 'html.parser')
-            img_url_rel = hem_soup.find('a', text='Sample').get('href')
+            img_url_rel = hem_soup.find('img', class_='thumb').get('src')
             hemispheres["img_url"] = f'https://data-class-mars-hemispheres.s3.amazonaws.com/Mars_Hemispheres/{img_url_rel}'
 
             # get title and add it to hemispheres dict
