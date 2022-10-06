@@ -16,3 +16,6 @@ Create a program that will scrape multiple websites, import information to Mongo
 * Created "Refresh" button to scrape for current data.
 * Stylized webpage using bootstrap and css components.
 * Programmed webpage to be mobile and tablet friendly in addition to desktop.
+
+![webpage_top](https://user-images.githubusercontent.com/108758105/194200307-d1713b70-5a8e-4288-9a9e-c22887d42e91.png)![webpage_bottom](https://user-images.githubusercontent.com/108758105/194200319-1ca5757d-b4bd-4229-a8bf-74f7a3b4f2a9.png)
+
