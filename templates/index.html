@@ -39,35 +39,37 @@
               </div>
             </div>
           </div>
-          <!-- .col-xs-12 col-md-12 -->
+          
           <!-- Featured Image and Facts section -->
-
-          <div class="row" id="mars-featured-image">
-            <div class="col-md-7">
-              <h2>Featured Mars Image</h2>
-              <img
-                src="{{mars.featured_image}}"
-                class="img-responsive"
-                alt="Responsive image"
-              />
-              <div class="news-article--media--image--credits">
-                <span class="label">Credit: NASA.gov</span>
+          <div class="row" id="mars-feature-row">
+            <div class="col-xs-12 col-md-12">
+              <div class="row" id="mars-featured-image">
+                <div class="col-xs-9 col-md-6">
+                  <h2>Featured Mars Image</h2>
+                  <img
+                    src="{{mars.featured_image}}"
+                    class="img-responsive"
+                    alt="Responsive image"
+                  />
+                  <div class="news-article--media--image--credits">
+                    <span class="label">Credit: NASA.gov</span>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-
             <!-- Mars Facts -->
 
-            <div class="col-md-3">
-              <div class="row" id="mars-facts">
-                <h4>Mars Facts</h4>
-                {{ mars.facts | safe }}
+              <div class="col-xs-3 col-md-3">
+                <div class="row" id="mars-facts">
+                  <h4>Mars Facts</h4>
+                  {{ mars.facts | safe }}
+                </div>
               </div>
             </div>
           </div>
+          
 
-          <!-- Featured Image and Facts section -->
-          <!-- col-xs-offset-4 col-md-offset-4 -->
+          <!-- Mars Hemispheres -->
+          
           <div class="row text-center" id="mars-hemispheres">
             <div class="col-xs-12 col-md-12 ">
               <div class="container">
@@ -82,8 +84,8 @@
                                 alt="Thumbnail"
                               />
                             </div>
-                            <div class="caption text-sm">
-                              <h3>{{ hem.title }}</h3>
+                            <div class="caption text-center">
+                              <h5>{{ hem.title }}</h5>
                             </div> 
                           </div>
                     {% endfor %}
@@ -92,6 +94,11 @@
               </div>
             </div>
           </div>
+
+          <div class="caption text-center">
+            <h8><br><br><br><br>Mars Bootcamp Challenge</h8>
+            <h8><br>Manny Linares</h8>
+          </div> 
 
       </div>
   </body>
